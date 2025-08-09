@@ -1,69 +1,88 @@
-# React + TypeScript + Vite
+# 💌 MoodMail – Emotion-Based Email Generator
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A lightweight, interactive React app that generates mood-based email subject lines and footer messages based on how you're feeling.
 
-Currently, two official plugins are available:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## ✨ Features
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+- Take mood input from the user (e.g., “happy”, “sad”, “angry”, "nervous", "excited")
+- Dynamically generates a subject line with current date and footer
+- Copy the subject 
+- Matching mood emoji 😄😢😠🙂
+- Clean, responsive UI built with TailwindCSS
+- Folder-based structure with reusable components
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+---
+
+## 🧠 What You’ll Learn
+
+- React state handling using `useState`
+- Conditional rendering based on logic
+- String methods: `toLowerCase()`, `includes()`
+- Basic component-driven UI design
+- Separation of logic and UI
+- TailwindCSS + ShadCN integration for clean UI
+
+---
+
+## 🛠 Tech Stack
+
+| Tool         | Purpose                           |
+|--------------|-----------------------------------|
+| React + Vite | Frontend Framework + Dev Server   |
+| TypeScript   | Type-safe development             |
+| Tailwind CSS | Utility-first UI styling          |
+| ShadCN       | Pre-styled React UI components    |
+
+---
+
+## 📁 Folder Structure
+
+
+```
+src/
+├── components/
+│   ├── MoodInput.tsx      # Input field + generate button
+│   ├── MoodOutput.tsx     # Shows generated subject/footer
+├── pages/
+│   └── Home.tsx           # Main app logic and UI
+├── App.tsx                # Root component
+├── main.tsx               # React DOM entry
+└── index.css              # Tailwind CSS import
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+---
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## 🚀 Getting Started
 
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+Follow these steps to run the project locally:
+
+### 1. Clone the repo
+
+```bash
+git clone https://github.com/krithika94/MoodGenerator.git
+cd moodmail-generator
 ```
+
+### 2. Install dependencies
+
+```bash
+npm install
+```
+
+### 3. Run the app
+
+```bash
+npm run dev
+```
+
+Now open your browser and go to:  
+👉 [http://localhost:5173](http://localhost:5173)
+
+---
+
+
